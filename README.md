@@ -299,6 +299,20 @@ There is an Arch User Repository (AUR) package for [spotDL](https://aur.archlinu
     - {ext}
     - {playlist}
 
+## Docker Environment Alternative
+
+Build the image from source:
+
+`$ docker build --tag spotdl:latest github.com/spotDL/spotify-downloader`
+
+Run the image:
+
+`$ docker run --rm -it -v ./music/:/music [yourSpotdlArgs]`
+
+Example:
+
+`$ docker run --rm -it -v ./music/:/music https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b`
+
 ## `pipx` Isolated Environment Alternative
 
 For users who are not familiar with `pipx`, it can be used to run scripts **without**
