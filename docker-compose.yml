@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  spotdl:
+    # build container image from git repository
+    build: https://github.com/spotDL/spotify-downloader.git
+    container_name: spotdl
+    volumes:
+      # Downloads will be saved to /music inside the container,
+      # so we need a volume mapping to get access
+      - "./music/:/music"
+    stdin_open: true
+    tty: true
